@@ -7,7 +7,7 @@ package paquete2;
 
 /**
  *
- * @author reroes
+ * @author Jose Cordova
  */
 public class Hospital {
     private String nombre;
@@ -20,6 +20,13 @@ public class Hospital {
         valores que serán asignados a los atributos.
     
     */
+    
+    public Hospital(String n, String c, int nD, int nE){
+        nombre =  n;
+        ciudad = c;
+        numeroDoctores = nD;
+        numeroEnfermeros = nE;
+    }
     
     public void establecerNombre(String n){
         nombre = n;
@@ -53,4 +60,15 @@ public class Hospital {
         return numeroEnfermeros;
     }
     
+    public String toString() {
+        String cadena = String.format("Nombre Hospital: %s\n"
+                + "Ciudad: %s\n"
+                + "Numero de Doctores: %d\n"
+                + "Numero de enfermeros: %d\n",
+                obtenerNombre(),
+                obtenerCiudad(),
+                obtenerNumeroDoctores(),
+                obtenerNumeroEnfermeros());
+        return cadena;
+        }
 }
