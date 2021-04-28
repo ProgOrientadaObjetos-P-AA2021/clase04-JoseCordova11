@@ -7,7 +7,7 @@ package paquete1;
 
 /**
  *
- * @author reroes
+ * @author Jose Cordova 
  */
 public class Hospital {
     private String nombre;
@@ -25,6 +25,14 @@ public class Hospital {
     numeroEnfermeros: 200
     
     */
+    
+    public Hospital(){
+        nombre = "Isidro Ayora";
+        ciudad = "Loja";
+        numeroDoctores = 100;
+        numeroEnfermeros = 200;
+        
+    }
     
     public void establecerNombre(String n){
         nombre = n;
@@ -58,4 +66,16 @@ public class Hospital {
         return numeroEnfermeros;
     }
     
+    public String toString(){
+        String cadena = String.format("El nombre del Hospital es:%s\n"
+                                    +"El nombre de la ciudad en la que se encuentra es:%s\n"
+                                    +"El numero de Doctores es:%d\n"
+                                    +"y el numero de enfermeros es:%d\n",
+                                    obtenerNombre(),
+                                    obtenerCiudad(),
+                                    obtenerNumeroDoctores(),
+                                    obtenerNumeroEnfermeros());
+        return cadena;
+                                     
+    }
 }
